@@ -212,7 +212,7 @@ export default class Meta extends React.Component {
             <GridSetup
               allScenes={this.state.scenes}
               autoEdit={this.state.autoEdit}
-              grid={grid}
+              scene={grid}
               tutorial={this.state.tutorial}
               goBack={a(actions.goBack)}
               onDelete={a(actions.deleteGrid)}
@@ -267,8 +267,8 @@ export default class Meta extends React.Component {
           {this.isRoute('gridplay') && (
             <GridPlayer
               config={this.state.config}
-              grid={grid}
-              scenes={this.state.scenes}
+              scene={grid}
+              allScenes={this.state.scenes}
               theme={theme}
               cache={a(actions.cacheImage)}
               getTags={actions.getTags.bind(this, this.state.library)}
